@@ -1,7 +1,7 @@
-﻿# Assorted Mod Compatibility
+﻿# Catalyst Anti-Tier Lock
 
-![Assorted Mod Compatibility mod icon](icon.png)
+![Catalyst Anti-Tier Lock mod icon](icon.png)
 
-**Assorted Mod Compatibility** is a tModLoader mod that adds compatibility between several other mods. This mod does nothing on its own, and must be installer alongside other mods to do anything.
+**Catalyst Anti-Tier Lock** is an edit to the [Catalyst Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=2838015851). This mod removes the restriction that Astrageldon must be fought pre-Moon Lord.
 
-[Download the mod on Steam!](https://steamcommunity.com/sharedfiles/filedetails/?id=2976409348)
+[Download the mod on Steam!](https://steamcommunity.com/sharedfiles/filedetails/?id=)
