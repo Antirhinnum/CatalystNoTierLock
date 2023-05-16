@@ -1,0 +1,10 @@
+displayName = Catalyst Anti-Tier Lock
+author = Snek
+version = 0.1
+homepage = https://github.com/Antirhinnum/CatalystNoTierLock
+hideCode = true
+hideResources = true
+includeSource = false
+buildIgnore = LICENSE, README.md, *.pdn
+includePDB = true
+modReferences = CalamityMod, CatalystMod
