@@ -1,6 +1,7 @@
 using CatalystMod;
 using CatalystMod.Items.SummonItems;
 using CatalystMod.NPCs;
+using CatalystMod.UI;
 using MonoMod.RuntimeDetour.HookGen;
 using System.Collections.Generic;
 using System.Reflection;
@@ -37,6 +38,11 @@ public sealed class CatalystNoTierLock : Mod
 		HookEndpointManager.Add(_playerUpdateEquips, EquipsCheck);
 		HookEndpointManager.Add(_playerLoadData, ForceData);
 		HookEndpointManager.Add(_npcPreKill, PreKillCheck);
+
+		if (ModContent.GetInstance<ClientConfig>().DisableIcon)
+		{
+			LoadMenu.PlayerLoadIcons.RemoveAll(icon => icon.hoverNameKey == "Mods.CatalystMod.TitleIcon.Astrageldon");
+		}
 	}
 
 	private static bool CanUseCheck(orig_CommunicatorCanUseItem orig, AstralCommunicator self, Player player)

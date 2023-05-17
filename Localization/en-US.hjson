@@ -1,0 +1,11 @@
+﻿Mods.CatalystNoTierLock:
+{
+	Config:
+	{
+		DisableIcon:
+		{
+			Label: "Disable Astrageldon Status Icon"
+			Tooltip: "Disables the Astrageldon status icon on the player select screen."
+		}
+	}
+}
