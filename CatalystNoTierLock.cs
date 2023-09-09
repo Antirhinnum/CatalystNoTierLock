@@ -2,7 +2,6 @@ using CatalystMod;
 using CatalystMod.Items.SummonItems;
 using CatalystMod.NPCs;
 using CatalystMod.UI;
-using MonoMod.RuntimeDetour.HookGen;
 using System.Collections.Generic;
 using System.Reflection;
 using Terraria;
@@ -18,7 +17,7 @@ public sealed class CatalystNoTierLock : Mod
 	private delegate void orig_CommunicatorTooltip(AstralCommunicator self, List<TooltipLine> tooltips);
 
 	private delegate void orig_PlayerEquips(CatalystPlayer self);
-	
+
 	private delegate void orig_PlayerLoadData(CatalystPlayer self, TagCompound tag);
 
 	private delegate bool orig_NPCPreKill(CatalystNPC self, NPC npc);
@@ -33,11 +32,11 @@ public sealed class CatalystNoTierLock : Mod
 
 	public override void Load()
 	{
-		HookEndpointManager.Add(_communicatorCanUseItem, CanUseCheck);
-		HookEndpointManager.Add(_communicatorTooltip, TooltipCheck);
-		HookEndpointManager.Add(_playerUpdateEquips, EquipsCheck);
-		HookEndpointManager.Add(_playerLoadData, ForceData);
-		HookEndpointManager.Add(_npcPreKill, PreKillCheck);
+		MonoModHooks.Add(_communicatorCanUseItem, CanUseCheck);
+		MonoModHooks.Add(_communicatorTooltip, TooltipCheck);
+		MonoModHooks.Add(_playerUpdateEquips, EquipsCheck);
+		MonoModHooks.Add(_playerLoadData, ForceData);
+		MonoModHooks.Add(_npcPreKill, PreKillCheck);
 
 		if (ModContent.GetInstance<ClientConfig>().DisableIcon)
 		{
