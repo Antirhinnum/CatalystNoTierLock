@@ -1,6 +1,6 @@
 displayName = Catalyst Anti-Tier Lock
 author = Snek
-version = 1.1.1
+version = 1.1.2
 homepage = https://github.com/Antirhinnum/CatalystNoTierLock
 hideCode = false
 hideResources = false
